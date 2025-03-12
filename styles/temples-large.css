@@ -1,0 +1,12 @@
+/* temples-large.css - Larger Screen Adjustments */
+
+@media (min-width: 768px) {
+    nav ul {
+        gap: 2rem;
+    }
+    
+    main {
+        max-width: 70%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
