@@ -1,12 +1,40 @@
 /* temples-large.css - Larger Screen Adjustments */
 
 @media (min-width: 768px) {
+    /* Improve spacing in navigation */
     nav ul {
         gap: 2rem;
     }
-    
+
+    /* Adjust main layout for larger screens */
     main {
-        max-width: 70%;
+        max-width: 75%;
+        margin: 2rem auto;
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Enhance figure appearance on larger screens */
+    figure {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    figure:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Adjust grid to better suit desktop layouts */
+    main {
+        max-width: 65%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Increase font size for better readability */
+    figcaption {
+        font-size: 1.2rem;
     }
 }

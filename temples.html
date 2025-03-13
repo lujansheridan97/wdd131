@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
+    <style>
+        /* Navigation hover effect */
+        nav ul li a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+        
+        /* Responsive menu */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -65,7 +88,7 @@
        
     </main>
     <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Maria Ruiz Diaz.</p>
         <p id="dynamic-info"></p>
     </footer>
 </body>
