@@ -9,7 +9,7 @@
     --font-primary: 'Roboto', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* Removed @import and moved Google Font to HTML head */
 
 body {
     font-family: var(--font-primary);
@@ -28,14 +28,7 @@ header {
     position: relative;
 }
 
-header::after {
-    content: ''; 
-    display: block;
-    width: 100px;
-    height: 5px;
-    background-color: var(--light-blue);
-    margin: 10px auto;
-}
+/* Removed header::after pseudo-element */
 
 .hero {
     background-color: var(--medium-blue);
@@ -83,6 +76,7 @@ footer {
     margin-top: 40px;
 }
 
+/* Added @media query as required */
 @media screen and (max-width: 768px) {
     .data, .weather {
         position: relative;
