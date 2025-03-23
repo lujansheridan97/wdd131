@@ -8,6 +8,8 @@
     <title>Argentina</title>
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -34,10 +36,10 @@
         </section>
         
         <section class="weather">
-            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <h2>Weather <span class="weather">⛅</span></h2>
             <picture>
-                <source srcset="images/weather-icon.svg" media="(max-width: 768px)">
-                <img src="images/weather-icon.svg" alt="Weather Icon" onerror="this.src='images/default-weather.png';">
+                <source srcset="images/weather.svg" media="(max-width: 768px)">
+                <img src="images/weather.jpg" alt="Weather Icon" onerror="this.src='images/default-weather.png';">
             </picture>
             <p>Temperature: <span id="temp">10</span>°C</p>
             <p>Conditions: <span>Partly Cloudy</span></p>
