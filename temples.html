@@ -3,70 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Temples.">
-    <meta name="author" content="Maria de Lujan Ruiz Diaz">
     <title>Temple Album</title>
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="temples.css">
 </head>
 <body>
     <header>
-        <h1>Temple Album</h1>
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Temple Collection</h1>
-        <h2>Explore these sacred places</h2>
         <figure>
-            <img src="images/temple-buenos-aires.jpg" alt="Buenos Aires, Argentina Temple">
-            <figcaption>Buenos Aires, Argentina Temple</figcaption>
+            <img src="temple1.jpg" alt="Temple 1">
+            <figcaption>Temple 1</figcaption>
         </figure>
         <figure>
-            <img src="images/temple-buenos-aires.jpg" alt="Buenos Aires, Argentina Temple">
-            <figcaption>Buenos Aires, Argentina Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-buenos-aires.jpg" alt="Buenos Aires, Argentina Temple">
-            <figcaption>Buenos Aires, Argentina Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/templo tijuana.jpg" alt="Tijuana, Mexico Temple ">
-            <figcaption>Tijuana, Mexico Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/templo tijuana.jpg" alt="Tijuana, Mexico Temple ">
-            <figcaption>Tijuana, Mexico Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/templo tijuana.jpg" alt="Tijuana, Mexico Temple ">
-            <figcaption>Tijuana, Mexico Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/templo-arizona.jpg" alt="Arizona, USA Temple">
-            <figcaption>Arizona, USA Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/templo-arizona.jpg" alt="Arizona, USA Temple">
-            <figcaption>Arizona, USA Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/templo-arizona.jpg" alt="Arizona, USA Temple">
-            <figcaption>Arizona, USA Temple</figcaption>
+            <img src="temple2.jpg" alt="Temple 2">
+            <figcaption>Temple 2</figcaption>
         </figure>
     </main>
+
     <footer>
-        <p>&copy; 2025 Maria Ruiz Diaz.</p>
-        <p id="dynamic-info"></p>
+        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+        
+        // Set last modified date in footer
+        document.getElementById("lastModified").textContent = document.lastModified;
+
+        // Toggle navigation menu
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector("nav").classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
-
