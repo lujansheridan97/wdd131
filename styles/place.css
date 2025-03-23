@@ -6,10 +6,13 @@
     --very-light-blue: #CAF0F8;
     --white: #FFFFFF;
     --black: #000000;
+    --font-primary: 'Roboto', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-primary);
     background-color: var(--very-light-blue);
     color: var(--black);
     margin: 0;
@@ -22,6 +25,16 @@ header {
     color: var(--white);
     padding: 20px;
     font-size: 2em;
+    position: relative;
+}
+
+header::after {
+    content: ''; 
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: var(--light-blue);
+    margin: 10px auto;
 }
 
 .hero {
@@ -68,4 +81,15 @@ footer {
     padding: 10px;
     font-size: 0.9em;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .data, .weather {
+        position: relative;
+        width: 80%;
+        margin: 20px auto;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
