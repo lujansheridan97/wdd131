@@ -1,40 +1,48 @@
 /* temples-large.css - Larger Screen Adjustments */
 
-@media (min-width: 768px) {
-    /* Improve spacing in navigation */
-    nav ul {
-        gap: 2rem;
-    }
-
-    /* Adjust main layout for larger screens */
-    main {
-        max-width: 75%;
-        margin: 2rem auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-
-    /* Enhance figure appearance on larger screens */
-    figure {
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-    figure:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    }
+body {
+    max-width: 75%;
+    margin: 2rem auto;
 }
 
-@media (min-width: 1024px) {
-    /* Adjust grid to better suit desktop layouts */
-    main {
-        max-width: 65%;
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* Remove CSS Flex and Grid layout */
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
 
-    /* Increase font size for better readability */
-    figcaption {
-        font-size: 1.2rem;
-    }
+nav ul li {
+    display: inline-block; /* This is not Flexbox, just a simple inline-block for horizontal items */
+    margin-right: 1rem;
+}
+
+figure {
+    margin: 0 auto 2rem;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+figcaption {
+    font-size: 1.2rem;
+}
+
+/* Adjust layout for desktop screens without using media query */
+main {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4B0076;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
 }
