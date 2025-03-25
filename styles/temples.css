@@ -57,6 +57,11 @@ nav ul li a {
     padding: 10px;
 }
 
+/* Removed :hover pseudo-class from here */
+/* nav ul li a:hover {
+    background-color: #3b005c;
+} */
+
 nav ul.active {
     display: flex;
 }
@@ -101,14 +106,13 @@ footer {
     margin-top: 20px;
 }
 
-/* Media query for screens larger than 769px */
 @media (min-width: 769px) {
     .menu-toggle {
-        display: none; /* Hide menu toggle button on larger screens */
+        display: none;
     }
 
     nav {
-        display: flex !important; /* Show nav bar on larger screens */
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
         position: relative;
@@ -118,29 +122,10 @@ footer {
     nav ul {
         display: flex;
         flex-direction: row;
-        gap: 15px; /* Add space between nav items */
+        gap: 15px;
     }
 
     main {
-        grid-template-columns: repeat(3, 1fr); /* Show 3 columns for larger screens */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
-
-/* Media query for screens smaller than 769px */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically on small screens */
-        gap: 10px;
-    }
-
-    figure img {
-        max-width: 100%; /* Make images responsive */
-    }
-
-    main {
-        grid-template-columns: 1fr; /* Show 1 column on small screens */
-    }
-}
-
-
-
