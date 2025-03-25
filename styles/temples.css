@@ -101,13 +101,14 @@ footer {
     margin-top: 20px;
 }
 
+/* Media query for screens larger than 769px */
 @media (min-width: 769px) {
     .menu-toggle {
-        display: none;
+        display: none; /* Hide menu toggle button on larger screens */
     }
 
     nav {
-        display: flex !important;
+        display: flex !important; /* Show nav bar on larger screens */
         flex-direction: row;
         justify-content: center;
         position: relative;
@@ -117,10 +118,29 @@ footer {
     nav ul {
         display: flex;
         flex-direction: row;
-        gap: 15px;
+        gap: 15px; /* Add space between nav items */
     }
 
     main {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Show 3 columns for larger screens */
     }
 }
+
+/* Media query for screens smaller than 769px */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        gap: 10px;
+    }
+
+    figure img {
+        max-width: 100%; /* Make images responsive */
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Show 1 column on small screens */
+    }
+}
+
+
+
