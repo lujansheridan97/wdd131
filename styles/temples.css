@@ -57,10 +57,11 @@ nav ul li a {
     padding: 10px;
 }
 
-/* Removed :hover pseudo-class from here */
-/* nav ul li a:hover {
+/* Se agregó la pseudo-clase :hover */
+nav ul li a:hover {
     background-color: #3b005c;
-} */
+    transition: background-color 0.3s ease-in-out;
+}
 
 nav ul.active {
     display: flex;
