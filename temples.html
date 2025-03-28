@@ -73,17 +73,8 @@
         <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script>
-        // Set current year in footer
-        document.getElementById("year").textContent = new Date().getFullYear();
-        
-        // Set last modified date in footer
-        document.getElementById("lastModified").textContent = document.lastModified;
-
-        // Toggle navigation menu
-        document.querySelector(".menu-toggle").addEventListener("click", function() {
-            document.querySelector("nav").classList.toggle("active");
-        });
-    </script>
+  
+      <!-- External JS file without the defer attribute -->
+      <script src="scripts/temples.js"></script>
 </body>
 </html>
