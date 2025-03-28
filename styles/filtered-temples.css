@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: #4B0076;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #4B0076;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+
+/* Se agregó la pseudo-clase :hover */
+nav ul li a:hover {
+    background-color: #3b005c;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+h1, h2 {
+    color: #4B0076;
+}
+
+figure {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+figcaption {
+    background-color: #EEE;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer {
+    background-color: #4B0076;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Temple cards styles */
+.temple-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temple-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.temple-card img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.temple-card h4 {
+    color: #4B0076;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.temple-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Responsive design for temple cards */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        background: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .temple-card {
+        margin: 0;
+    }
+}
