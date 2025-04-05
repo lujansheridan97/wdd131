@@ -1,0 +1,121 @@
+/* Used the form exercise from the Week 5 Learning Activities for ideas for the form styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header,
+footer {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+main {
+    color: black;
+    background-color: #F2F7FC;
+}
+
+.form {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.form label {
+    display: block;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    max-width: 400px;
+}
+
+.form select,
+input[type="date"],
+input[type="text"] {
+    display: block;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.label-header {
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.radio-ratings label {
+    padding: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.radio-ratings {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+}
+
+#check-all-text {
+    font-style: italic;
+}
+
+.features label {
+    padding: 0;
+    font-weight: normal;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+.optional-text {
+    display: inline;
+    font-size: 0.75rem;
+    color: green;
+}
+
+.required-text {
+    display: inline;
+    font-size: 0.75rem;
+    color: #8A3A42;
+}
+
+input[type="submit"] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+#footercopy {
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 0.5rem;
+}

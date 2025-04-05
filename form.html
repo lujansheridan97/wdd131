@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria de Lujan Ruiz Diaz Franco| WDD 131 - Product Review Form</title>
+    <meta name="description" content="Product review form with responsive behavior and confirmation page">
+    <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="form">
+            <label>Product Name <span class="required-text">(Required)</span> <!--Got help from here to know how to put an element inside of <label> https://www.sitepoint.com/community/t/element-div-not-allowed-as-child-of-element-label-in-this-context-suppressing-further-errors-from-this-subtree/257008-->
+                <select name="products" id="products" required>
+                    <option value="" id="products-list-placeholder" disabled selected hidden>Choose a Product ...
+                    </option>
+                    <!--Got some help here: https://www.w3docs.com/snippets/css/how-to-create-a-placeholder-for-an-html5-select-box-by-using-only-html-and-css.html-->
+                </select>
+            </label>
+
+            <div class="label-header">Overall Rating <span class="required-text">(Required)</span></div>
+
+            <div class="radio-ratings">
+                <label>&#9734;<br><input type="radio" name="rating" id="star1" value="1" required></label>
+                <label>&#9734;&#9734;<br><input type="radio" name="rating" id="star2" value="2"></label>
+                <label>&#9734;&#9734;&#9734;<br><input type="radio" name="rating" id="star3" value="3"></label>
+                <label>&#9734;&#9734;&#9734;&#9734;<br><input type="radio" name="rating" id="star4" value="4"></label>
+                <label>&#9734;&#9734;&#9734;&#9734;&#9734;<br><input type="radio" name="rating" id="star5" value="5"></label>
+            </div>
+
+            <label>Date of Installation <span class="required-text">(Required)</span><input type="date" id="installDate" name="installDate" required></label>
+
+            <div class="label-header">Which features did you find useful in the product?<br>
+                <div id="check-all-text">(Check all that apply)</div>
+            </div>
+
+            <div class="features">
+                <label><input type="checkbox" name="durability" id="durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease" id="ease" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="performance" id="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" id="design" value="yes">Design</label>
+            </div>
+
+            <div>
+                <div class="label-header">Written Review <span class="optional-text">(Optional)</span></div>
+            </div>
+
+            <div class="written-review">
+                <textarea name="review" id="review" rows="6" placeholder="Type review here..."></textarea>
+            </div>
+
+            <div class="name-field">
+                <label>Your Name <span class="optional-text">(Optional)</span><input type="text" name="full-name" id="full-name"></label>
+            </div>
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p id="footercopy">&copy;<span id="currentyear"></span> | Maria de Lujan Ruiz Diaz Franco| U.S.A.</p>
+        <p id="footerlastmod">Last modification: <span id="currentdatetime"></span></p>
+    </footer>
+</body>
+</html>
