@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #75AADB;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('../images/argentina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 400px;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .btn {
+    background-color: #75AADB;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #5b8dbf;
+  }
+  
+  /* Product Section */
+  .products {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #75AADB;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
