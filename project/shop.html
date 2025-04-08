@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Argentinian Mate & Products</title>
+    <link rel="stylesheet" href="styles/shop.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h1>Argentinian Mate & Products</h1>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="nav-menu">
+          <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+      </header>
+      
+
+    <section class="shop-hero">
+        <h2>Discover Authentic Argentinian Products</h2>
+        <p>High-quality yerba mate, gourds, and more!</p>
+        <button class="btn">Shop Now</button>
+    </section>
+
+    <section class="product-categories">
+        <h2>Product Categories</h2>
+        <div class="category-grid">
+            <div class="category">
+                <img src="images/yerba.jpg" alt="Yerba Mate">
+                <p>Yerba Mate</p>
+            </div>
+            <div class="category">
+                <img src="images/mate.jpg" alt="Gourd Sets">
+                <p>Gourd Sets</p>
+            </div>
+            <div class="category">
+                <img src="images/bombilla.jpg" alt="Bombillas">
+                <p>Bombillas</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/yerba.jpg" alt="Yerba Mate" loading="lazy">
+                
+
+                <h3>Yerba Mate</h3>
+                <p>$10.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/mate.jpg" alt="Mate Gourd" loading="lazy">
+                <h3>Mate Gourd</h3>
+                <p>$15.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/bizcochitos.webp" alt="Bizcochos agridulce" loading="lazy">
+                <h3>Bizcochos agridulce</h3>
+                <p>$3.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/guaymallen.webp" alt="Alfajores" loading="lazy">
+                <h3>Alfajores</h3>
+                <p>$1.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/tofi.webp" alt="Alfajores" loading="lazy">
+                <h3>Alfajores</h3>
+                <p>$1.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/bombilla.jpg" alt="Bombilla" loading="lazy">
+                <h3>Bombilla</h3>
+                <p>$2.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.querySelector('nav .menu');
+      
+        hamburger.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+        });
+      </script>
+      
+      
+    <footer>
+        <p>&copy; 2025 Argentinian Mate & Products. All rights reserved.</p>
+    </footer>
+</body>
+</html>
