@@ -4,8 +4,8 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // Function to add a product to the cart
 function addToCart() {
     const productName = document.getElementById("product-name").value;
-    const productPrice = parseFloat(document.getElementById("product-price").value); // Assuming product price input
-    const productDescription = document.getElementById("product-description").value; // Assuming product description input
+    const productPrice = parseFloat(document.getElementById("product-price").value);
+    const productDescription = document.getElementById("product-description").value;
 
     if (productName && productPrice && productDescription) {
         const product = {
@@ -14,10 +14,11 @@ function addToCart() {
             description: productDescription
         };
 
-        cart.push(product); // Add product to the cart array
-        localStorage.setItem("cart", JSON.stringify(cart)); // Save cart to localStorage
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
         alert(`${productName} has been added to your cart!`);
-        displayCart(); // Update the cart display
+        displayCart();
+        calculateTotal();
     } else {
         alert("Please enter a valid product name, price, and description.");
     }
@@ -26,14 +27,18 @@ function addToCart() {
 // Function to display the current cart
 function displayCart() {
     const cartList = document.getElementById("cart-list");
-    cartList.innerHTML = ""; // Clear the current list
+    cartList.innerHTML = "";
 
     if (cart.length === 0) {
         cartList.innerHTML = "<li>Your cart is empty!</li>";
     } else {
         cart.forEach((product, index) => {
             const li = document.createElement("li");
-            li.innerHTML = `${product.name} - $${product.price.toFixed(2)} <button onclick="removeFromCart(${index})">Remove</button>`;
+            li.innerHTML = `
+                <strong>${product.name}</strong> - $${product.price.toFixed(2)}
+                <br><em>${product.description}</em>
+                <button onclick="removeFromCart(${index})">Remove</button>
+            `;
             cartList.appendChild(li);
         });
     }
@@ -41,26 +46,31 @@ function displayCart() {
 
 // Function to remove a product from the cart
 function removeFromCart(index) {
-    cart.splice(index, 1); // Remove product at index
-    localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
-    displayCart(); // Refresh the cart display
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+    calculateTotal();
 }
 
-// Function to clear the cart (e.g., when checking out)
+// Function to clear the cart
 function clearCart() {
-    cart = []; // Empty the cart array
-    localStorage.removeItem("cart"); // Remove the cart from localStorage
+    cart = [];
+    localStorage.removeItem("cart");
     alert("Your cart has been cleared.");
-    displayCart(); // Update the cart display
+    displayCart();
+    calculateTotal();
 }
 
 // Function to calculate the total price of the cart
 function calculateTotal() {
     const total = cart.reduce((sum, product) => sum + product.price, 0);
-    document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
+    const totalDisplay = document.getElementById("total-price");
+    if (totalDisplay) {
+        totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+    }
 }
 
-// Calling displayCart on page load to show any saved cart items
+// On page load: show any saved cart items and total
 document.addEventListener("DOMContentLoaded", () => {
     displayCart();
     calculateTotal();
